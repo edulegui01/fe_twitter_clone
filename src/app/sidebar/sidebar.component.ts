@@ -47,4 +47,12 @@ export class SidebarComponent{
     this.router.navigate([`/perfil/${this.username}`])
   }
 
+  logout(){
+    sessionStorage.clear();
+    localStorage.clear();
+
+    this.router.navigate([''])
+
+  }
+
 }
