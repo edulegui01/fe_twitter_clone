@@ -1,0 +1,30 @@
+.twitter-logo {
+    color: #1da1f2;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .login-card {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #e1e8ed;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  .btn-twitter {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+    color: #fff;
+  }
+  .btn-twitter:hover {
+    background-color: #0d95e8;
+    border-color: #0d95e8;
+  }
+  .forgot-password {
+    color: #1da1f2;
+    font-size: 0.9em;
+  }
+  .forgot-password:hover {
+    text-decoration: underline;
+  }

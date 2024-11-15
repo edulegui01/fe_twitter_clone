@@ -1,0 +1,25 @@
+<div class="main-content p-4">
+  <!-- Tweet Box -->
+  <div class="tweet-box mb-4 p-3 border rounded">
+    <form [formGroup]="tweetForm">
+      <textarea formControlName="tweet" class="form-control" rows="3" placeholder="¿Qué está pasando?"></textarea>
+      <button class="btn btn-primary mt-2 float-end" (click)="saveTweet()">Tweet</button>
+    </form>
+    
+  </div>
+
+  <!-- Feed -->
+  <div class="feed">
+
+    @for (item of totalTweets; track item.id) {
+      <div class="tweet border rounded p-3 mb-3">
+        <strong>{{item.userId}}</strong>
+        <p>{{item.tweet}}</p>
+      </div>
+      } @empty {
+      <li>There are no items.</li>
+      }
+  </div>
+
+  
+</div>

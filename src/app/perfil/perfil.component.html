@@ -1,0 +1,31 @@
+<div class="main-content p-4">
+    <div class="profile-container">
+        <h2>{{ username }}'s Profile</h2>
+        
+        <div class="profile-details">
+          <img src="https://via.placeholder.com/150" alt="User Profile Picture" class="profile-img" />
+          <div class="user-info">
+            <h3>{{ username }}</h3>
+            
+            <div class="user-stats">
+              <div>Seguidores: {{ followersCount }}</div>
+              <div>Seguidos: {{ followingCount }}</div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mostrar más detalles del perfil aquí -->
+      </div>
+  
+    <div class="feed mt-2">
+
+        @for (item of tweets; track item.id) {
+          <div class="tweet border rounded p-3 mb-3">
+            <strong>{{item.userId}}</strong>
+            <p>{{item.tweet}}</p>
+          </div>
+          } @empty {
+          <li>There are no items.</li>
+          }
+    </div>
+  </div>

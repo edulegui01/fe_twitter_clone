@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="login-card text-center">
+      <div class="twitter-logo mb-4">Twitter Clone</div>
+      
+      <form [formGroup]="loginForm">
+        <div class="form-group">
+          <input type="text" formControlName="username" class="form-control" placeholder="Usuario" required>
+        </div>
+        
+        <div class="form-group">
+          <input   formControlName="password" class="form-control" placeholder="Contraseña" required>
+        </div>
+
+        <button type="button" class="btn btn-twitter btn-block" (click)="dologin()">Iniciar sesión</button>
+      </form>
+
+      
+      <hr>
+
+      <p>¿No tienes cuenta? <a  class="text-primary link" (click)="goToRegister()">Regístrate</a></p>
+    </div>
+</div>
+

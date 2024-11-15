@@ -1,0 +1,31 @@
+.nav-link {
+  color: #333;
+}
+.nav-link.active {
+  background-color: #1DA1F2;
+  color: white;
+}
+.user-info {
+  font-size: 0.9em;
+}
+
+.user-profile {
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-size: 0.9em;
+}
+
+
+.logo_header{
+  cursor: pointer;
+}
