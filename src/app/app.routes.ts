@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RegisterComponent } from './register/register.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FollowersComponent } from './followers/followers.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
             {
                 path: 'perfil/:username',
                 component: PerfilComponent,
+            },
+            {
+                path: 'list/:username',
+                component: FollowersComponent,
             },
         ]
     },

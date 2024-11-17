@@ -70,4 +70,16 @@
     padding-top: 10px;
     font-size: 0.9em;
   }
+
+
+  .follow-box{
+    cursor: pointer;
+    padding: 3px;
+  }
+
+  .follow-box:hover{
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 3px;
+  }
   

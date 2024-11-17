@@ -4,3 +4,9 @@
 .tweet {
   background-color: #fff;
 }
+
+
+.user-link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}

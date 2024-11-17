@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SidebarService } from '../sidebar/sidebar.service';
 import { PerfilService } from './perfil.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -18,7 +18,7 @@ export class PerfilComponent {
   followingCount!:number;
   tweets:any = [];
 
-  constructor( private sidebarService:SidebarService, private perfilService:PerfilService, private route: ActivatedRoute) {
+  constructor( private sidebarService:SidebarService, private perfilService:PerfilService, private route: ActivatedRoute,private router: Router,) {
     this.username = this.route.snapshot.paramMap.get('username');
     
   }
@@ -40,6 +40,15 @@ export class PerfilComponent {
 
     
 
+  }
+
+
+  goFollowers(){
+    this.router.navigate([`/list/${this.username}`], { state: {followers:true } });
+  }
+
+  goFollowing(){
+    this.router.navigate([`/list/${this.username}`], { state: {followers:false } });
   }
 
 }

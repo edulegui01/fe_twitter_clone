@@ -1,0 +1,9 @@
+.followed-list {
+    background-color: #f5f8fa;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+  }
+  .list-group-item {
+    border: none;
+  }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { HomeService } from './home.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent {
   tweetData!:any;
 
 
-  constructor( private homeService:HomeService,private formBuilder: FormBuilder,) {
+  constructor( private homeService:HomeService,private formBuilder: FormBuilder,private router:Router) {
     this.tweetForm = this.formBuilder.group({
       tweet: ['', [Validators.required, Validators.maxLength(280)]],
     });
@@ -52,6 +53,11 @@ export class HomeComponent {
         alert('El tweet supera los 280 caracteres')
       }
     })
+  }
+
+
+  goPerfil(username:string){
+    this.router.navigate([`/perfil/${username}`]);
   }
 
 

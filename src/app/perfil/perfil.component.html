@@ -8,8 +8,8 @@
             <h3>{{ username }}</h3>
             
             <div class="user-stats">
-              <div>Seguidores: {{ followersCount }}</div>
-              <div>Seguidos: {{ followingCount }}</div>
+              <div class="follow-box" (click)="goFollowers()">Seguidores: {{ followersCount }}</div>
+              <div class="follow-box" (click)="goFollowing()">Seguidos: {{ followingCount }}</div>
             </div>
           </div>
         </div>
